@@ -1,0 +1,9 @@
+# Prometheus configuratie
+global:
+  scrape_interval:     15s
+
+- job_name: bap-app
+  scrape_interval: 5s
+
+  static_configs:
+  - targets: ['172.17.0.1:8000', '172.17.0.1:9102', '172.17.0.1:8001']
